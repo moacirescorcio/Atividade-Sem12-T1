@@ -1,12 +1,10 @@
 ano = 1599
-nascidos = 0
-mortes = 0
-populacao = int(input())
+populacao = int(input('Insira a população de dodôs: '))
 extincao = (populacao * 0.1)
 
 while populacao > extincao:    
-    nascidos = round((populacao * 0.01), 0)
-    mortes = round((populacao * 0.06), 0)
-    populacao = round((populacao - mortes) + (populacao + nascidos), 0)
-    ano += 1
-    print(f'{ano:},{nascidos},{mortes},{populacao}')
+    nascidos = (populacao * 0.01)
+    mortes = (populacao * 0.06)
+    populacao = (populacao - mortes + nascidos)
+    ano = ano + 1
+    print(f'Ano: {ano}Nascidos: {nascidos:.0f}Mortes: {mortes:.0f}População: {populacao:.0f}')
